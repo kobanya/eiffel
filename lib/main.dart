@@ -49,12 +49,29 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.lightGreen,
               ),
-              child: Text('Eiffel könyvjelző'),
+                child:  Text('Eiffel könyvjelzők',
+                style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 3.0,
+                fontWeight:  FontWeight.bold,
+                fontSize: 19.0,
+                ),
+              ),
             ),
         // Könyvjelző első linkjének megadása
             ListTile(
-              title: const Text('1. oldal'),
+              title: const Text('Jelmezkereső',
+                style: TextStyle(
+                color: Colors.black54,
+                letterSpacing: 2.0,
+                fontWeight:  FontWeight.bold,
+                fontSize: 17.0,
+              ),
+
+              ),
+
               onTap: () {
+
                 // Update the state of the app
                 // ...
                 // Then close the drawer
@@ -63,7 +80,15 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző második linkjánek megadása
             ListTile(
-              title: const Text('2. oldal'),
+              title: const Text('Cipőméret',
+                style: TextStyle(
+                color: Colors.black54,
+                letterSpacing: 2.0,
+                fontWeight:  FontWeight.bold,
+                fontSize: 17.0,
+              ),
+
+            ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -73,7 +98,15 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző harmadik linkjének megadása
             ListTile(
-              title: const Text('3. oldal'),
+              title: const Text('Leltári szám kereső',
+                style: TextStyle(
+                  color: Colors.black54,
+                  letterSpacing: 2.0,
+                  fontWeight:  FontWeight.bold,
+                  fontSize: 17.0,
+                ),
+
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -83,13 +116,25 @@ class MyHomePage extends StatelessWidget {
             ),
       // Könyvjelző a negyedik  linkhez
             ListTile(
-              title: const Text('4. oldal'),
+              title: const Text('Tisztítószer készlet',
+                style: TextStyle(
+                  color: Colors.black54,
+                  letterSpacing: 2.0,
+                  fontWeight:  FontWeight.bold,
+                  fontSize: 17.0,
+                ),
+
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
               },
+            ),
+// elválasztó vonal beillesztése
+            Divider(
+              height: 20.0,
             ),
           ],
         ),
