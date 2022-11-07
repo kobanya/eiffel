@@ -24,13 +24,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:
+      AppBar(
         title: const Text('Eiffel műhelyház'),
         backgroundColor: Colors.lightGreen,
       ),
 
       body: const Center(
-        child: Text('My Page!'),
+        child:
+        CircleAvatar(
+            backgroundImage: AssetImage('assets/eiffel.png'),
+            radius: 50.0
+        ),
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
@@ -46,8 +51,9 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Text('Eiffel könyvjelző'),
             ),
+        // Könyvjelző első linkjének megadása
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('1. oldal'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -55,8 +61,29 @@ class MyHomePage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
+        // A könyvjelző második linkjánek megadása
             ListTile(
-              title: const Text('Item 2'),
+              title: const Text('2. oldal'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+        // A könyvjelző harmadik linkjének megadása
+            ListTile(
+              title: const Text('3. oldal'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+      // Könyvjelző a negyedik  linkhez
+            ListTile(
+              title: const Text('4. oldal'),
               onTap: () {
                 // Update the state of the app
                 // ...
