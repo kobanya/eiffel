@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
+
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   static const appTitle = 'Eiffel Műhelyház';
@@ -20,6 +22,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
+
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,7 @@ class MyHomePage extends StatelessWidget {
                 child:  Text('Eiffel könyvjelzők',
                 style: TextStyle(
                 color: Colors.white,
-                letterSpacing: 3.0,
+                letterSpacing: 2.0,
                 fontWeight:  FontWeight.bold,
                 fontSize: 19.0,
                 ),
@@ -60,6 +63,7 @@ class MyHomePage extends StatelessWidget {
             ),
         // Könyvjelző első linkjének megadása
             ListTile(
+              leading:  const Icon(Icons.accessibility_new_sharp),
               title: const Text('Jelmezkereső',
                 style: TextStyle(
                 color: Colors.black54,
@@ -72,6 +76,7 @@ class MyHomePage extends StatelessWidget {
 
               onTap: () {
 
+
                 // Update the state of the app
                 // ...
                 // Then close the drawer
@@ -80,16 +85,18 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző második linkjánek megadása
             ListTile(
+              leading:  const Icon(Icons.border_color_outlined),
               title: const Text('Cipőméret',
                 style: TextStyle(
                 color: Colors.black54,
-                letterSpacing: 2.0,
+                letterSpacing: 1.0,
                 fontWeight:  FontWeight.bold,
                 fontSize: 17.0,
               ),
 
             ),
               onTap: () {
+
                 // Update the state of the app
                 // ...
                 // Then close the drawer
@@ -98,10 +105,11 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző harmadik linkjének megadása
             ListTile(
+              leading:  const Icon(Icons.format_list_numbered),
               title: const Text('Leltári szám kereső',
                 style: TextStyle(
                   color: Colors.black54,
-                  letterSpacing: 2.0,
+                  letterSpacing: 1.0,
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
@@ -116,10 +124,11 @@ class MyHomePage extends StatelessWidget {
             ),
       // Könyvjelző a negyedik  linkhez
             ListTile(
+              leading:  const Icon(Icons.soap),
               title: const Text('Tisztítószer készlet',
                 style: TextStyle(
                   color: Colors.black54,
-                  letterSpacing: 2.0,
+                  letterSpacing: 1.0,
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
@@ -141,4 +150,7 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+
+
 }
+
