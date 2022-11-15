@@ -63,7 +63,8 @@ class MyHomePage extends StatelessWidget {
             ),
         // Könyvjelző első linkjének megadása
             ListTile(
-              leading:  const Icon(Icons.accessibility_new_sharp),
+              leading:  const Icon(Icons.accessibility_new_sharp,
+              color: Colors.black),
               title: const Text('Jelmezkereső',
                 style: TextStyle(
                 color: Colors.black54,
@@ -85,7 +86,8 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző második linkjánek megadása
             ListTile(
-              leading:  const Icon(Icons.border_color_outlined),
+              leading:  const Icon(Icons.looks_two_outlined,
+                  color: Colors.black),
               title: const Text('Cipőméret',
                 style: TextStyle(
                 color: Colors.black54,
@@ -105,7 +107,8 @@ class MyHomePage extends StatelessWidget {
             ),
         // A könyvjelző harmadik linkjének megadása
             ListTile(
-              leading:  const Icon(Icons.format_list_numbered),
+              leading:  const Icon(Icons.format_list_numbered,
+                  color: Colors.black),
               title: const Text('Leltári szám kereső',
                 style: TextStyle(
                   color: Colors.black54,
@@ -124,7 +127,8 @@ class MyHomePage extends StatelessWidget {
             ),
       // Könyvjelző a negyedik  linkhez
             ListTile(
-              leading:  const Icon(Icons.soap),
+              leading:  const Icon(Icons.soap,
+                  color: Colors.black),
               title: const Text('Tisztítószer készlet',
                 style: TextStyle(
                   color: Colors.black54,
@@ -142,8 +146,9 @@ class MyHomePage extends StatelessWidget {
               },
             ),
 // elválasztó vonal beillesztése
-            Divider(
-              height: 20.0,
+            const Divider(
+              height: 30.0,
+                color: Colors.lightGreen
             ),
           ],
         ),
