@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:menu/CipoMeret.dart';
 import 'package:menu/LeletariSzam.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
+import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
 
 
@@ -48,8 +49,7 @@ class MyHomePage extends StatelessWidget {
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
@@ -82,11 +82,6 @@ class MyHomePage extends StatelessWidget {
               ),
 
               onTap: () {
-
-
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
               },
             ),
@@ -152,6 +147,26 @@ class MyHomePage extends StatelessWidget {
                 // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,new MaterialPageRoute(builder: (context) => Tisztitoszer()));
+              },
+            ),
+            ListTile(
+              leading:  const Icon(Icons.iron,
+                  color: Colors.black),
+              title: const Text('Tárgyieszköz leltár',
+                style: TextStyle(
+                  color: Colors.black54,
+                  letterSpacing: 1.0,
+                  fontWeight:  FontWeight.bold,
+                  fontSize: 17.0,
+                ),
+
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => TargyiEszkoz()));
               },
             ),
 // elválasztó vonal beillesztése

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:menu/CipoMeret.dart';
+import 'package:menu/LeletariSzam.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
-import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
 import 'package:menu/main.dart';
 
 
 
+void main() => runApp(const TargyiEszkoz());
 
-void main() => runApp(const LeltariSzam());
 
+class TargyiEszkoz extends StatelessWidget {
 
-class LeltariSzam extends StatelessWidget {
-
-  const LeltariSzam({super.key});
+  const TargyiEszkoz({super.key});
 
   static const appTitle = 'Eiffel Műhelyház';
 
@@ -37,7 +36,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar:
       AppBar(
-        title: const Text('Leletári szám alapú keresés'),
+        title: const Text('Tárgyi eszközök leltára'),
         backgroundColor: Colors.lightGreen,
       ),
 
@@ -50,8 +49,7 @@ class MyHomePage extends StatelessWidget {
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
@@ -84,18 +82,13 @@ class MyHomePage extends StatelessWidget {
               ),
 
               onTap: () {
-
-
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const MyApp()));
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => MyApp()));
               },
             ),
             // A könyvjelző második linkjánek megadása
             ListTile(
-              leading:  const Icon(Icons.content_cut_sharp,
+              leading:  Icon(Icons.content_cut_sharp,
                   color: Colors.black),
               title: const Text('Cipőméret',
                 style: TextStyle(
@@ -112,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const CipoMeret()));
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => CipoMeret()));
               },
             ),
             // A könyvjelző harmadik linkjének megadása
@@ -133,7 +126,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const LeltariSzam()));
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => LeltariSzam()));
               },
             ),
             // Könyvjelző a negyedik  linkhez
@@ -220,8 +213,7 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const OffLineJelmezkereso()));
-                // Navigator.push(context,new MaterialPageRoute(builder: (context) => CsvPage()));
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => OffLineJelmezkereso()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer

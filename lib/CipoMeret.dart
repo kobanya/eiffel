@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:menu/LeletariSzam.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
+import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
 import 'package:menu/main.dart';
 
@@ -153,6 +154,26 @@ class MyHomePage extends StatelessWidget {
                 // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,new MaterialPageRoute(builder: (context) => Tisztitoszer()));
+              },
+            ),
+            ListTile(
+              leading:  const Icon(Icons.iron,
+                  color: Colors.black),
+              title: const Text('Tárgyieszköz leltár',
+                style: TextStyle(
+                  color: Colors.black54,
+                  letterSpacing: 1.0,
+                  fontWeight:  FontWeight.bold,
+                  fontSize: 17.0,
+                ),
+
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => TargyiEszkoz()));
               },
             ),
 // elválasztó vonal beillesztése
