@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:menu/CipoMeret.dart';
 import 'package:menu/LeletariSzam.dart';
-import 'package:menu/OffLineJelmezkereso.dart';
+import 'package:menu/xxx.dart';
 import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
+import 'package:menu/OffLineJelmezkereso.dart';
 
 
 
@@ -212,7 +213,7 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => OffLineJelmezkereso()));
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => ReadJson()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
