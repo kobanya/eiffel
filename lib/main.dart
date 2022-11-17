@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:menu/CsvPage.dart';
 
 
 
@@ -66,7 +67,7 @@ class MyHomePage extends StatelessWidget {
             // Könyvjelző első linkjének megadása
             ListTile(
               leading:  const Icon(Icons.accessibility_new_sharp,
-                  color: Colors.black),
+                  color: Colors.black,size: 30.0),
               title: const Text('Jelmezkereső',
                 style: TextStyle(
                   color: Colors.black54,
@@ -189,10 +190,12 @@ class MyHomePage extends StatelessWidget {
 
               ),
               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => CsvPage()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                //Navigator.pop(context,new MaterialPageRoute(builder: builder:(context)=> ));
               },
             ),
           ],
