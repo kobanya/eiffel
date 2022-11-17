@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:menu/CipoMeret.dart';
-import 'package:menu/LeletariSzam.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
-import 'package:menu/Tisztitoszer.dart';
+import 'package:menu/main.dart';
+import 'LeletariSzam.dart';
 
 
 
-void main() => runApp(const MyApp());
+
+void main() => runApp(Tisztitoszer());
 
 
-class MyApp extends StatelessWidget {
+class Tisztitoszer extends StatelessWidget {
 
-  const MyApp({super.key});
+  const Tisztitoszer({super.key});
 
   static const appTitle = 'Eiffel Műhelyház';
 
@@ -35,7 +36,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar:
       AppBar(
-        title: const Text('Jelmezkereső'),
+        title: const Text('Tisztítószer készlet'),
         backgroundColor: Colors.lightGreen,
       ),
 
@@ -88,6 +89,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
+                Navigator.push(context,new MaterialPageRoute(builder: (context) => MyApp()));
               },
             ),
             // A könyvjelző második linkjánek megadása
@@ -198,6 +200,7 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,new MaterialPageRoute(builder: (context) => OffLineJelmezkereso()));
+                // Navigator.push(context,new MaterialPageRoute(builder: (context) => CsvPage()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
