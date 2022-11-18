@@ -101,7 +101,10 @@ class _ReadJsonState extends State<ReadJson> {
                             textAlign: TextAlign.left),
 
                         title: Text(_items[index]["fcsoport"],
-                                textAlign: TextAlign.right),
+                                textAlign: TextAlign.right,
+                                 style: TextStyle(color: Colors.green[900],
+                                 )),
+
 
                         subtitle: Text(_items[index]["pozcikd"],
                             style: const TextStyle(fontSize: 15.0),

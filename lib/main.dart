@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:menu/CipoMeret.dart';
 import 'package:menu/LeletariSzam.dart';
-import 'package:menu/xxx.dart';
 import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
@@ -83,12 +82,13 @@ class MyHomePage extends StatelessWidget {
               ),
 
               onTap: () {
+
                 Navigator.pop(context);
               },
             ),
             // A könyvjelző második linkjánek megadása
             ListTile(
-              leading:  Icon(Icons.content_cut_sharp,
+              leading:  const Icon(Icons.content_cut_sharp,
                   color: Colors.black),
               title: const Text('Cipőméret',
                 style: TextStyle(
@@ -105,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => CipoMeret()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const CipoMeret()));
               },
             ),
             // A könyvjelző harmadik linkjének megadása
@@ -126,7 +126,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => LeltariSzam()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const LeltariSzam()));
               },
             ),
             // Könyvjelző a negyedik  linkhez
@@ -147,7 +147,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => Tisztitoszer()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const Tisztitoszer()));
               },
             ),
             ListTile(
@@ -167,7 +167,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => TargyiEszkoz()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const TargyiEszkoz()));
               },
             ),
 // elválasztó vonal beillesztése
@@ -213,7 +213,7 @@ class MyHomePage extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => ReadJson()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) => const ReadJson()));
                 // Update the state of the app
                 // ...
                 // Then close the drawer
