@@ -202,7 +202,7 @@ class MyHomePage extends StatelessWidget {
               leading:  const Icon(Icons.bookmarks_outlined,
                   color: Colors.black),
 
-              title: const Text('Offline jelmezkereső',
+              title: const Text('Offline jelmezlista',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,

@@ -26,6 +26,8 @@ class _ReadJsonState extends State<ReadJson> {
 
   List _items = [];
 
+  //get trailing => null;
+
   @override
 
   void initState() {
@@ -42,7 +44,7 @@ class _ReadJsonState extends State<ReadJson> {
 
   Future<void> readJson() async {
 
-    final String response = await rootBundle.loadString('jelmezkereses.json');
+    final String response = await rootBundle.loadString('assets/jelmezkereses.json');
 
     final data = await json.decode(response);
 
@@ -67,42 +69,42 @@ class _ReadJsonState extends State<ReadJson> {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
 
-        title: const Text('Vész eseti jelmezkereső - Offline'),
+        title: const Text('Vész eseti jelmezkereső'),
 
       ),
 
       body: Padding(
 
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(7),
 
           child: _items.isNotEmpty
 
               ? Column(
 
-            children: [
+               children: [
 
               Expanded(
 
                 child: ListView.builder(
-
+                  shrinkWrap: true,
                   itemCount: _items.length,
 
                   itemBuilder: (context, index) {
 
                     return Card(
-
-                      margin: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(7),
 
                       child: ListTile(
 
                         leading: Text(_items[index]["produkcicme"],
-                            style: const TextStyle(fontSize: 20.0),
+                            style: const TextStyle(fontSize: 17.0),
                             textAlign: TextAlign.left),
 
-                        title: Text(_items[index]["fcsoport"]),
+                        title: Text(_items[index]["fcsoport"],
+                                textAlign: TextAlign.right),
 
                         subtitle: Text(_items[index]["pozcikd"],
-                            style: const TextStyle(fontSize: 20.0),
+                            style: const TextStyle(fontSize: 15.0),
                             textAlign: TextAlign.right),
 
                       ),
@@ -119,7 +121,7 @@ class _ReadJsonState extends State<ReadJson> {
 
           )
 
-              : Center(child: CircularProgressIndicator())),
+              : const Center(child: CircularProgressIndicator())),
 
     );
 
