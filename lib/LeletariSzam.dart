@@ -27,7 +27,7 @@ class LeltariSzam extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
+ const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -60,70 +60,69 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.lightGreen,
               ),
-              child:  Text('Eiffel könyvjelzők',
+              child: Text('Eiffel könyvjelzők',
                 style: TextStyle(
                   color: Colors.white,
                   letterSpacing: 2.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 19.0,
                 ),
               ),
             ),
             // Könyvjelző első linkjének megadása
             ListTile(
-              leading:  const Icon(Icons.accessibility_new_sharp,
-                  color: Colors.black,size: 30.0),
+              leading: const Icon(Icons.accessibility_new_sharp,
+                  color: Colors.black, size: 30.0),
               title: const Text('Jelmezkereső',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 2.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
               ),
 
               onTap: () {
-
-
                 // Update the state of the app
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const MyApp()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const MyApp()));
               },
             ),
             // A könyvjelző második linkjánek megadása
             ListTile(
-              leading:  const Icon(Icons.content_cut_sharp,
+              leading: const Icon(Icons.content_cut_sharp,
                   color: Colors.black),
               title: const Text('Cipőméret',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
               ),
               onTap: () {
-
                 // Update the state of the app
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const CipoMeret()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const CipoMeret()));
               },
             ),
             // A könyvjelző harmadik linkjének megadása
             ListTile(
-              leading:  const Icon(Icons.onetwothree_outlined,
-                  color: Colors.black,size: 30.0),
+              leading: const Icon(Icons.onetwothree_outlined,
+                  color: Colors.black, size: 30.0),
               title: const Text('Leltári szám kereső',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
@@ -133,18 +132,19 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const LeltariSzam()));
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => const LeltariSzam()));
               },
             ),
             // Könyvjelző a negyedik  linkhez
             ListTile(
-              leading:  const Icon(Icons.soap,
+              leading: const Icon(Icons.soap,
                   color: Colors.black),
               title: const Text('Tisztítószer készlet',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
@@ -154,17 +154,18 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => Tisztitoszer()));
+                Navigator.push(context, new MaterialPageRoute(
+                    builder: (context) => Tisztitoszer()));
               },
             ),
             ListTile(
-              leading:  const Icon(Icons.iron,
+              leading: const Icon(Icons.iron,
                   color: Colors.black),
               title: const Text('Tárgyieszköz leltár',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
@@ -174,7 +175,8 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
-                Navigator.push(context,new MaterialPageRoute(builder: (context) => TargyiEszkoz()));
+                Navigator.push(context, new MaterialPageRoute(
+                    builder: (context) => TargyiEszkoz()));
               },
             ),
 // elválasztó vonal beillesztése
@@ -183,13 +185,13 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.lightGreen
             ),
             ListTile(
-              leading:  const Icon(Icons.theater_comedy,
-                  color: Colors.black,size: 40.0),
+              leading: const Icon(Icons.theater_comedy,
+                  color: Colors.black, size: 40.0),
               title: const Text('Szcenáriumok',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
@@ -206,21 +208,22 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.lightGreen
             ),
             ListTile(
-              leading:  const Icon(Icons.bookmarks_outlined,
+              leading: const Icon(Icons.bookmarks_outlined,
                   color: Colors.black),
 
               title: const Text('Offline jelmezkereső',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
-                  fontWeight:  FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   fontSize: 17.0,
                 ),
 
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const OffLineJelmezkereso()));
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => const OffLineJelmezkereso()));
                 // Navigator.push(context,new MaterialPageRoute(builder: (context) => CsvPage()));
                 // Update the state of the app
                 // ...
@@ -236,3 +239,4 @@ class MyHomePage extends StatelessWidget {
 
 
 }
+

@@ -69,7 +69,7 @@ class _ReadJsonState extends State<ReadJson> {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
 
-        title: const Text('Vész eseti jelmezkereső'),
+        title: const Text('Offline Jelmezlista'),
 
       ),
 

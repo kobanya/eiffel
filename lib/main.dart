@@ -4,6 +4,7 @@ import 'package:menu/LeletariSzam.dart';
 import 'package:menu/TargyiEszkoz.dart';
 import 'package:menu/Tisztitoszer.dart';
 import 'package:menu/OffLineJelmezkereso.dart';
+import 'package:menu/teszt.dart';
 
 
 
@@ -70,7 +71,7 @@ class MyHomePage extends StatelessWidget {
             // Könyvjelző első linkjének megadása
             ListTile(
               leading:  const Icon(Icons.accessibility_new_sharp,
-                  color: Colors.black,size: 30.0),
+                  color: Colors.black,size: 35.0),
               title: const Text('Jelmezkereső',
                 style: TextStyle(
                   color: Colors.black54,
@@ -78,8 +79,8 @@ class MyHomePage extends StatelessWidget {
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
+              subtitle: Text('A jelmezek tárolási helye'),
 
               onTap: () {
 
@@ -89,16 +90,16 @@ class MyHomePage extends StatelessWidget {
             // A könyvjelző második linkjánek megadása
             ListTile(
               leading:  const Icon(Icons.content_cut_sharp,
-                  color: Colors.black),
+                  color: Colors.black, size: 30),
               title: const Text('Cipőméret',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
-                ),
-
+                )
               ),
+              subtitle: Text('Balettművészek gyakicipőmérete'),
               onTap: () {
 
                 // Update the state of the app
@@ -110,7 +111,7 @@ class MyHomePage extends StatelessWidget {
             ),
             // A könyvjelző harmadik linkjének megadása
             ListTile(
-              leading:  const Icon(Icons.onetwothree_outlined,
+              leading:  const Icon(Icons.menu_book,
                   color: Colors.black,size: 30.0),
               title: const Text('Leltári szám kereső',
                 style: TextStyle(
@@ -119,8 +120,8 @@ class MyHomePage extends StatelessWidget {
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
+              subtitle: Text('Jelmez azonosítása LTSZ alapján'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -133,15 +134,15 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading:  const Icon(Icons.soap,
                   color: Colors.black),
-              title: const Text('Tisztítószer készlet',
+              title: const Text('Mosószer készlet',
                 style: TextStyle(
                   color: Colors.black54,
                   letterSpacing: 1.0,
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
+              subtitle: Text('Az azonnal elérhető mosószer'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -152,7 +153,7 @@ class MyHomePage extends StatelessWidget {
             ),
             ListTile(
               leading:  const Icon(Icons.iron,
-                  color: Colors.black),
+                  color: Colors.black, size: 40,),
               title: const Text('Tárgyieszköz leltár',
                 style: TextStyle(
                   color: Colors.black54,
@@ -160,10 +161,11 @@ class MyHomePage extends StatelessWidget {
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
+              subtitle: Text('ENK és tárgyieszközök jegyzéke'),
               onTap: () {
                 // Update the state of the app
+
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
@@ -192,6 +194,7 @@ class MyHomePage extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
+               Navigator.push(context,MaterialPageRoute(builder: (context) =>TesztOldal()));
               },
             ),
             const Divider(
@@ -200,7 +203,7 @@ class MyHomePage extends StatelessWidget {
             ),
             ListTile(
               leading:  const Icon(Icons.bookmarks_outlined,
-                  color: Colors.black),
+                  color: Colors.black, size:40),
 
               title: const Text('Offline jelmezlista',
                 style: TextStyle(
@@ -209,8 +212,8 @@ class MyHomePage extends StatelessWidget {
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
+              subtitle: Text('Internet kimaradás esetén is használható lista'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const ReadJson()));
