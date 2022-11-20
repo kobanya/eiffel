@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const TesztOldal());
-}
+  }
 
 class TesztOldal extends StatelessWidget {
   const TesztOldal({Key? key}) : super(key: key);
@@ -25,31 +25,20 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+   @override
+   State<MyHomePage> createState() => _MyHomePageState();
 }
 
   class _MyHomePageState extends State<MyHomePage> {
     Future<void>? _launched;
 
-    @override
-    void initState() {
-     super.initState();
-      // Check for phone call support.
-      canLaunchUrl(Uri(scheme: 'tel', path: '123')).then((bool result) {
-        setState(() {
-       });
-      });
-   }
-
-
   Future<void> _launchInWebViewOrVC(Uri url) async {
     if (!await launchUrl(
       url,
       mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(
-          headers: <String, String>{'my_header_key': 'my_header_value'}),
-    )) {
+    )
+    )
+    {
       throw 'Could not launch $url';
     }
   }

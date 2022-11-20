@@ -38,19 +38,12 @@ class MyHomePage extends StatelessWidget {
       appBar:
       AppBar(
         title: const Text('Jelmezkereső'),
-        backgroundColor: Colors.lightGreen,
+       backgroundColor: Colors.lightGreen,
       ),
+// ----------- eddig tart a kezdőlap -------------
 
-      body: const Center(
-        child:
-        CircleAvatar(
-            backgroundImage: AssetImage('assets/eiffel.png'),
-            radius: 50.0
-        ),
-      ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
-
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
@@ -59,7 +52,7 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.lightGreen,
               ),
-              child:  Text('Eiffel könyvjelzők',
+              child:  Text('Eiffel Jelmeztár',
                 style: TextStyle(
                   color: Colors.white,
                   letterSpacing: 2.0,
@@ -101,10 +94,6 @@ class MyHomePage extends StatelessWidget {
               ),
               subtitle: Text('Balettművészek gyakicipőmérete'),
               onTap: () {
-
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const CipoMeret()));
               },
@@ -123,9 +112,6 @@ class MyHomePage extends StatelessWidget {
               ),
               subtitle: Text('Jelmez azonosítása LTSZ alapján'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const LeltariSzam()));
               },
@@ -144,9 +130,6 @@ class MyHomePage extends StatelessWidget {
               ),
               subtitle: Text('Az azonnal elérhető mosószer'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const Tisztitoszer()));
               },
@@ -164,10 +147,6 @@ class MyHomePage extends StatelessWidget {
               ),
               subtitle: Text('ENK és tárgyieszközök jegyzéke'),
               onTap: () {
-                // Update the state of the app
-
-                // ...
-                // Then close the drawer
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const TargyiEszkoz()));
               },
@@ -187,13 +166,9 @@ class MyHomePage extends StatelessWidget {
                   fontWeight:  FontWeight.bold,
                   fontSize: 17.0,
                 ),
-
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+               Navigator.pop(context);
                Navigator.push(context,MaterialPageRoute(builder: (context) =>TesztOldal()));
               },
             ),
@@ -217,17 +192,10 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,MaterialPageRoute(builder: (context) => const ReadJson()));
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                //Navigator.pop(context,new MaterialPageRoute(builder: builder:(context)=> ));
               },
             ),
-          ],
-        ),
+            ]),
       ),
     );
   }
-
-
 }
